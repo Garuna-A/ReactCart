@@ -6,11 +6,12 @@
 button{
     margin:0.5%;
     background-color: white;
-    color: black ;
+    
 }
 .add{
     background-color: black;
     color: white;
+    margin-bottom: 5%;
 }
 .add:hover{
     background-color: rgb(77, 73, 73);
@@ -19,7 +20,21 @@ button{
     width: 200;
     height: auto;
     background-color: white;
+    margin-top:5%
 }
 h1{
     text-align: left;
+}
+.itemContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    margin:0.5%;
+    color: black ;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.itemContainer:hover{
+    box-shadow: 0 8px 16px rgb(255, 247, 247);
+    transform: translateY(-5px);
 }
