@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+button{
+    margin:0.5%;
+    background-color: white;
+    color: black ;
+}
+.add{
+    background-color: black;
+    color: white;
+}
+.add:hover{
+    background-color: rgb(77, 73, 73);
+}
+.image{
+    width: 200;
+    height: auto;
+    background-color: white;
+}
+h1{
+    text-align: left;
+}
