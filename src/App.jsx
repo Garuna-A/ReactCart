@@ -1,26 +1,44 @@
-import { useState } from 'react'
-import './App.css'
-import { Routes,Route } from 'react-router-dom'
-import Header from './components/Header'
-import Home from './components/home'
-import Cart from './components/Cart'
-function App() {
-  const [cart,setCart] = useState([]);
-  const[cartItemCount,setCartItemCount] = useState(0);
-  const addtoCart = (product)=>{
-    setCartItemCount(prev=>prev+1);
-    setCart(prev=>[...prev,product]);
-  };
+  import { useState } from 'react'
+  import './App.css'
+  import { Routes,Route } from 'react-router-dom'
+  import Header from './components/Header'
+  import Home from './components/home'
+  import Cart from './components/Cart'
+  function App() {
+    const [cart,setCart] = useState([]);
+    const[cartItemCount,setCartItemCount] = useState(0);
 
-  return(
-    <div>
-      <Header cartItemCount={cartItemCount}/>
-      <Routes>
-        <Route path='/' element={<Home addtoCart={addtoCart}/>} />
-        <Route path = 'cart' element = {<Cart item={cart}/>} />
-      </Routes>
-    </div>
-  )
-}
+    const addtoCart = (product)=>{
+      setCartItemCount(prev=>prev+1);
+      setCart(prev=>[...prev,product]);
+    };
 
-export default App
+    const removeFromCart = (product) => {
+      const index = cart.findIndex(
+        (item) => item[0] === product[0] && item[1] === product[1] && item[2] === product[2]
+      );
+      if (index !== -1) {
+        const newCart = [...cart];
+        newCart.splice(index, 1);
+        setCart(newCart);
+        setCartItemCount((prev) => prev - 1);
+      }
+    };
+
+    return(
+      <div>
+        <div className="header-app">
+            <Header cartItemCount={cartItemCount}/>
+        </div>
+          <div className="page-item">
+
+            <Routes>
+              <Route path='/' element={<Home addtoCart={addtoCart}/>} />
+              <Route path = 'cart' element = {<Cart item={cart} addToCart={addtoCart} removeFromCart={removeFromCart}/>} />
+            </Routes>
+          </div>
+      </div>
+    )
+  }
+
+  export default App
