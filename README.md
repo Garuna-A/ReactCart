@@ -1,12 +1,40 @@
-# React + Vite
+# ReactCart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ReactCart is a simple e-commerce application built with React, demonstrating product listing, shopping cart functionality, and basic routing.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **Product Display**: Fetches and displays a list of products from the [Fake Store API](https://fakestoreapi.com/products).
+* **Shopping Cart**: Users can add items to and remove items from a dynamic shopping cart.
+* **Cart Item Count**: The header displays the current number of items in the cart.
+* **Navigation**: Seamless navigation between the Home page (product list) and the Cart page using React Router DOM.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React.js
+* React Router DOM
+* CSS
+* Fake Store API (`https://fakestoreapi.com/products`)
+
+## Installation
+
+To get a local copy up and running, follow these simple steps:
+
+1.  **Clone the repository (if applicable, otherwise, create your project and add files):**
+
+   
+    ```bash
+    git clone https://github.com/Garuna-A/ReactCart.git
+    cd reactcart
+    ```
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+## Usage
+
+To run the application in development mode:
+
+```bash
+npm run dev
