@@ -1,7 +1,15 @@
+:root{
+    --yellow: #FFE74C;
+    --pink: #FF5964;
+    --white: #FFFFFF;
+    --green: #6BF178;
+    --blue: #35A7FF;
+}
+
 .container{
     display: flex;
     flex-wrap: wrap;
-    
+    justify-content: center;
 }
 button{
     margin:0.5%;
@@ -9,12 +17,16 @@ button{
     
 }
 .add{
-    background-color: black;
-    color: white;
+    background-color: var(--green);
+    color: rgb(59, 51, 51);
     margin-bottom: 5%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
 }
 .add:hover{
-    background-color: rgb(77, 73, 73);
+    box-shadow: -8px 8px 0 var(--blue);
+    transform: translateY(-2px);
+    transform: translateX(-2px);
 }
 .image{
     width: 200;
@@ -35,6 +47,7 @@ h1{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .itemContainer:hover{
-    box-shadow: 0 8px 16px rgb(255, 247, 247);
-    transform: translateY(-5px);
+    box-shadow: -8px 8px 0 var(--yellow);
+    transform: translateY(-2px);
+    transform: translateX(-2px);
 }

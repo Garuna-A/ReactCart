@@ -27,9 +27,9 @@ const Home = ({addtoCart}) =>{
             <div className="container">
 
             {product.map(([title,image,price],i)=>(
-                <div key={i} style={{width:300}} className="itemContainer">
+                <div key={i} style={{width:250}} className="itemContainer">
                     <div className="image">
-                    <img src={image} alt={title} width={200} />
+                    <img src={image} alt={title} width={150} />
                     </div>
                     <div className="text">
                         <p style={{fontSize:'1rem'}}>{title}</p>

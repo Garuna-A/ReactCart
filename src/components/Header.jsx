@@ -4,11 +4,10 @@ import { Link } from 'react-router-dom';
 const Header = ({cartItemCount}) =>{
     return(
         <div className="header">
-            <Link to='/'>
-                <a style={{fontSize:'3.2rem',fontWeight:500}}>ReactCart</a>
-            </Link>
+            
+            <Link to='/' style={{fontSize:'4rem', color:'#35A7FF'} } className='headerh1'>ReactCart</Link>
             <Link to={'cart'}>
-            <button style={{fontSize:'1.5rem', backgroundColor:'black', width:200}}>🛒Cart: {cartItemCount}</button>
+            <button style={{fontSize:'1.5rem', width:200, marginRight:'2rem'} }className="cartButton">🛒Cart: {cartItemCount}</button>
             </Link>
         </div>
     )
