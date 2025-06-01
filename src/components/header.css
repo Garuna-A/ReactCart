@@ -3,6 +3,27 @@
     justify-content: space-between;
     align-items: center;
 }
-button{
-    background-color: black;
+.cartItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid #f9f9f9 4px;
+}
+.text-cart{
+    width: 500px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+}
+.image-container{
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: #f9f9f9;
+    margin:5%
 }

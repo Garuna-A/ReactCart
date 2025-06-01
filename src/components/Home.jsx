@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import './home.css';
+import Header from "./Header";
 
 const Home = ({addtoCart}) =>{
     const[product,setProduct] = useState([]);
@@ -34,7 +36,7 @@ const Home = ({addtoCart}) =>{
                         <p style={{fontSize:'1.2rem'}}>{`$${price}`}</p>
                     </div>
                     <div className="addCart">
-                        <button className="add" onClick={addtoCart}>Add to cart</button>
+                            <button className="add" onClick={()=>addtoCart([title,image,price])}>Add to cart</button>         
                     </div>
                 </div>
             ))}
