@@ -1,7 +1,13 @@
 # ReactCart
+[![Netlify Status](https://api.netlify.com/api/v1/badges/eacc1053-dd26-4576-9798-c0d0a3748805/deploy-status)](https://reactcartt.netlify.app/)
+![ReactCart Screenshot](https://github.com/Garuna-A/ReactCart/blob/master/public/Screenshot_1-6-2025_195013_reactcartt.netlify.app.jpeg)
 
 ReactCart is a simple e-commerce application built with React, demonstrating product listing, shopping cart functionality, and basic routing.
 
+
+🔗 [Live Website](https://reactcartt.netlify.app/)
+
+📂 [View the Repository](https://github.com/Garuna-A/ReactCart)
 ## Features
 
 * **Product Display**: Fetches and displays a list of products from the [Fake Store API](https://fakestoreapi.com/products).
@@ -12,6 +18,7 @@ ReactCart is a simple e-commerce application built with React, demonstrating pro
 ## Technologies Used
 
 * React.js
+* Vite
 * React Router DOM
 * CSS
 * Fake Store API (`https://fakestoreapi.com/products`)
