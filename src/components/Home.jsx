@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import './home.css';
 
-const Home = () =>{
+const Home = ({addtoCart}) =>{
     const[product,setProduct] = useState([]);
 
     useEffect(()=>{
@@ -25,15 +25,18 @@ const Home = () =>{
             <div className="container">
 
             {product.map(([title,image,price],i)=>(
-                <button key={i} style={{width:300}}>
+                <div key={i} style={{width:300}} className="itemContainer">
                     <div className="image">
-
                     <img src={image} alt={title} width={200} />
                     </div>
-                    <p style={{fontSize:'1rem'}}>{title}</p>
-                    <p style={{fontSize:'1.2rem'}}>{`$${price}`}</p>
-                    <button className="add">Add to cart</button>
-                </button>
+                    <div className="text">
+                        <p style={{fontSize:'1rem'}}>{title}</p>
+                        <p style={{fontSize:'1.2rem'}}>{`$${price}`}</p>
+                    </div>
+                    <div className="addCart">
+                        <button className="add" onClick={addtoCart}>Add to cart</button>
+                    </div>
+                </div>
             ))}
 
             </div>
