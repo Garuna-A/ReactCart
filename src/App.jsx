@@ -7,10 +7,12 @@
   function App() {
     const [cart,setCart] = useState([]);
     const[cartItemCount,setCartItemCount] = useState(0);
+    const [cost,setCost] = useState(0);
 
     const addtoCart = (product)=>{
       setCartItemCount(prev=>prev+1);
       setCart(prev=>[...prev,product]);
+      setCost(prev=>prev+product[2]);
     };
 
     const removeFromCart = (product) => {
@@ -25,6 +27,13 @@
       }
     };
 
+    const clearCart = () =>{
+      const newCart = [...cart];
+      newCart.splice(0,newCart.length);
+      setCart(newCart);
+      setCartItemCount(0);
+    }
+
     return(
       <div>
         <div className="header-app">
@@ -34,7 +43,7 @@
 
             <Routes>
               <Route path='/' element={<Home addtoCart={addtoCart}/>} />
-              <Route path = 'cart' element = {<Cart item={cart} addToCart={addtoCart} removeFromCart={removeFromCart}/>} />
+              <Route path = 'cart' element = {<Cart item={cart} addToCart={addtoCart} removeFromCart={removeFromCart} cost={cost} clearCart={clearCart}/>} />
             </Routes>
           </div>
       </div>

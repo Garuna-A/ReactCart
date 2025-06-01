@@ -1,6 +1,6 @@
 import './header.css';
 
-const Cart = ({item,addToCart, removeFromCart})=>{
+const Cart = ({item,addToCart, removeFromCart, cost, clearCart})=>{
     console.log(item);
     const groupedItems = {};
 
@@ -32,6 +32,7 @@ const Cart = ({item,addToCart, removeFromCart})=>{
         <div style={{minHeight:'100vh'}}>
     
             <h1 style={{marginLeft:'2rem'}}>Cart:</h1>
+            <button style={{color:'black'}} className='cartButton' onClick={clearCart}>Checkout: ${cost}</button>
             {uniqueItems.map(({title,image,price,quantity},i)=>(
                 <div className="cartItem" key={i} >
                     <div className="image-container" width={200}>
