@@ -18,15 +18,20 @@ const Cart = ({item,addToCart, removeFromCart})=>{
     const uniqueItems = Object.values(groupedItems);
 
     if(item.length===0){
-        return <h2>You Cart Is Empty</h2>
+        return(
+            <div style={{  width:'100vw' ,minHeight: '100vh', textAlign: 'center'}} className='cartContent'>
+                <h2>Your cart is empty</h2>
+                <p style={{fontSize:'1.2rem'}}>Click on ReactCart to start shopping</p>
+            </div>
+        )
     }
     else{
 
         return(
     
-        <div>
+        <div style={{minHeight:'100vh'}}>
     
-            <h1>Cart:</h1>
+            <h1 style={{marginLeft:'2rem'}}>Cart:</h1>
             {uniqueItems.map(({title,image,price,quantity},i)=>(
                 <div className="cartItem" key={i} >
                     <div className="image-container" width={200}>
