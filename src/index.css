@@ -59,7 +59,7 @@ button:focus-visible {
 
 
 .header-app{
-  background-color: var(--white);
-  
+  text-align: left;
+  width: 100%;
 }
 
